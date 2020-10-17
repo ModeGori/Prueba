@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Informacion de {{ user.first_name }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img [src]="user.avatar"></ion-img>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="8">
+        <h3>Correo Electronico:</h3> 
+      </ion-col>
+      <ion-col size="8"><span>{{ user.email }}</span></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="8">
+        <h3>Primer nombre:</h3> 
+      </ion-col>
+      <ion-col size="8"><span>{{ user.first_name }}</span></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="8">
+        <h3>Segundo Nombre:</h3> 
+      </ion-col>
+      <ion-col size="8"><span>{{ user.last_name }}</span></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
